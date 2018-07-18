@@ -113,7 +113,8 @@
 ::selection {background: rgba({RGBcolor:accent},.2); color:#444;}
  
 
-.tmblr-iframe{ white-space:nowrap; -webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%); filter: invert(100%);opacity:.2;transition: .4s ease-in-out; -webkit-transition: .4s ease-in-out;-moz-transition: .4s ease-in-out;-o-transition: .4s ease-in-out;transform:scale(0.7,0.7);transform-origin:right top; } .tmblr-iframe:hover {  opacity:1; }
+
+mblr-iframe{ white-space:nowrap; -webkit-filter: invert(100%); -moz-filter: invert(100%); -o-filter: invert(100%); -ms-filter: invert(100%); filter: invert(100%);opacity:.2;transition: .4s ease-in-out; -webkit-transition: .4s ease-in-out;-moz-transition: .4s ease-in-out;-o-transition: .4s ease-in-out;transform:scale(0.7,0.7);transform-origin:right top; } .tmblr-iframe:hover {  opacity:1; }
  
 #s-m-t-tooltip{
     position:absolute;
@@ -337,14 +338,10 @@ attribute:"title"
 <body>
 
 <aside>
-
-	<table style="width:inherit;white-space:nowrap;text-align:left">
-		<th>
-			<img src="{PortraitURL-64}" align="middle"/>
-		</th>
-		<tr>
-			<td><a href="/" class="t" align="middle">{Title}</a></td>
-		</tr>
+			<img src="{PortraitURL-64}"/>
+			<a href="/" class="t">{Title}</a>
+			<br>
+	<table style="width:inherit;text-align:left;border-spacing: 2px;margin-left:20px;">
 		<tr>
 			<td><a href="/ask"><b>1</b> message</a></td> 
 			<td><a href="/archive"><b>2</b> history</a></td>
