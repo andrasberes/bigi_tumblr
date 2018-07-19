@@ -71,6 +71,7 @@
 
 <!--font-->
  
+<!--Google Analitics addon-->
 <link href='https://fonts.googleapis.com/css?family={select:font}|Inconsolata' rel='stylesheet' type='text/css'>
 
 <!--videos-->
@@ -286,7 +287,7 @@ footer { width:{select:post width};margin:auto;text-align:center;margin-bottom:8
 /* sb */
 
 aside { text-align:center;width:180px;top:50px;left:calc(50% - ({select:post width} / 2) - 250px);position:fixed;-webkit-animation-name: fadein;-webkit-animation-duration: 1.5s;  }
-aside img { display:block;width:50px;border-radius:2px;margin:auto;border:1px solid #eee }
+aside img { display:block;width:auto;border-radius:2px;margin:auto;border:1px solid #eee }
 a.t { display:block;font-size:13px;font-weight:600;color:#444;margin-top:10px;} a.t:hover { color:{color:accent}; } nav { margin:10px 0px;padding:10px;border:1px solid #eee;counter-reset:section;border-radius:2px; }
 nav a { display:inline-block;width:48%;text-align:left;}
 nav a:before { counter-increment: section;content:'0'counter(section);margin-right:5px;color:#444;font-weight:600;}
@@ -339,28 +340,29 @@ attribute:"title"
 
 <aside>
 			<img src="{PortraitURL-64}"/>
-			<a href="/" class="t">{Title}</a>
-			<br>
-	<table style="width:inherit;text-align:left;border-spacing: 2px;margin-left:20px;">
+			<a href="/" class="t" style="font-size:16px">{Title}</a>
+	<nav style="width:auto;text-align:left;white-space:nowrap">		
+	<table>
 		<tr>
-			<td><a href="/ask"><b>1</b> message</a></td> 
-			<td><a href="/archive"><b>2</b> history</a></td>
+			<td><a href="/ask">message </a></td> 
+			<td><a href="/archive">history</a></td>
 		</tr>
 		<tr>
-			<td>{block:iflink1}<a href="{text:link 1 url}"><b>3</b> {text:link 1}</a>{/block:iflink1}</td>
-			<td>{block:iflink2}<a href="{text:link 2 url}"><b>4</b> {text:link 2}</a>{/block:iflink2}</td>
+			<td>{block:iflink1}<a href="{text:link 1 url}">{text:link 1}</a>{/block:iflink1}</td>
+			<td>{block:iflink2}<a href="{text:link 2 url}">{text:link 2}</a>{/block:iflink2}</td>
 		</tr>
 		<tr>
-			<td>{block:iflink3}<a href="{text:link 3 url}"><b>5</b> {text:link 3}</a>{/block:iflink3}</td>
-			<td>{block:iflink5}<a href="{text:link 5 url}"><b>6</b> {text:link 5}</a>{/block:iflink5}</td>
+			<td>{block:iflink3}<a href="{text:link 3 url}">{text:link 3}</a>{/block:iflink3}</td>
+			<td>{block:iflink5}<a href="{text:link 5 url}">{text:link 5}</a>{/block:iflink5}</td>
 		</tr>
 	</table>
-	<br>
-	<table>
+	</nav>
     <div class="d">{Description}</div>
 	<br>
-	<div class="bigi_addon">Under construction</div>
-	</table>
+	<div>
+	    <a href="https://google.com">
+            <img border="0" src="https://static.posters.cz/image/750/naptarak/border-collie-i50706.jpg" width="200" height="200">
+        </a></div>
 </aside>
 
 <div class="stuff">
