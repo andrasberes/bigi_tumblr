@@ -71,7 +71,6 @@
 
 <!--font-->
  
-<!--Google Analitics addon-->
 <link href='https://fonts.googleapis.com/css?family={select:font}|Inconsolata' rel='stylesheet' type='text/css'>
 
 <!--videos-->
@@ -201,13 +200,7 @@ h1,h2,h3,h4,h5,h6 { padding:0;margin:5px 0px;font-size:13px;color:#444;font-weig
     border-radius:2px;
 }
 
-.bigi_addon {
-	background-color: lightgrey;
-    width: auto;
-    border: 5px solid green;
-    padding: 5px;
-    margin: 5px;
-}
+
 
 a.tumblr_blog,.asker,.asker a,.quotesource { font-weight:600;color:#444; }
 .tumblr_parent { border:none;margin:0;padding:2px;display:block;}
@@ -251,7 +244,10 @@ ol.notes li.note blockquote { padding:4px 10px;margin:5px 0px 0px 15px;}
 
 #vignette,.vignette { opacity:0!important; } .lightbox-image,#tumblr_lightbox img { box-shadow: none !important; border-radius:0 !important;} #tumblr_lightbox,.tmblr-lightbox { background:rgba(255,255,255,.7)!Important; } #tumblr_lightbox_left_link, #tumblr_lightbox_right_link { visibility: hidden; } .lightbox-caption,#tumblr_lightbox_caption { opacity:0; }
 
-
+.bigi_giftbox {
+    border:1px solid #eee;
+    padding:8px;
+}
 
 /* etc */
 
@@ -286,9 +282,9 @@ footer { width:{select:post width};margin:auto;text-align:center;margin-bottom:8
 
 /* sb */
 
-aside { text-align:center;width:180px;top:50px;left:calc(50% - ({select:post width} / 2) - 250px);position:fixed;-webkit-animation-name: fadein;-webkit-animation-duration: 1.5s;  }
-aside img { display:block;width:auto;border-radius:2px;margin:auto;border:1px solid #eee }
-a.t { display:block;font-size:13px;font-weight:600;color:#444;margin-top:10px;} a.t:hover { color:{color:accent}; } nav { margin:10px 0px;padding:10px;border:1px solid #eee;counter-reset:section;border-radius:2px; }
+aside { text-align:center;width:auto;top:50px;left:calc(50% - ({select:post width} / 2) - 250px);position:fixed;-webkit-animation-name: fadein;-webkit-animation-duration: 1.5s;  }
+aside img { display:block;width:250;border-radius:2px;margin:auto;border:1px solid #eee }
+a.t { display:block;font-size:13px;font-weight:600;color:#444;margin-top:8px;} a.t:hover { color:{color:accent}; } nav { margin:8px 0px;padding:8px;border:1px solid #eee;counter-reset:section;border-radius:2px; }
 nav a { display:inline-block;width:48%;text-align:left;}
 nav a:before { counter-increment: section;content:'0'counter(section);margin-right:5px;color:#444;font-weight:600;}
 nav a:hover:before,a.tumblr_blog:hover,.asker a:hover { color:{color:accent};}
@@ -339,30 +335,33 @@ attribute:"title"
 <body>
 
 <aside>
-			<img src="{PortraitURL-64}"/>
-			<a href="/" class="t" style="font-size:16px">{Title}</a>
-	<nav style="width:auto;text-align:left;white-space:nowrap">		
+	<img src="{PortraitURL-64}"/>
+	<a href="/" class="t">{Title}</a>
+	<nav style="width:auto;text-align:left;white-space:nowrap;">		
 	<table>
 		<tr>
-			<td><a href="/ask">message </a></td> 
-			<td><a href="/archive">history</a></td>
+			<td><a href="/ask"> message</a></td> 
+			<td><a href="/archive"> archive</a></td>
 		</tr>
 		<tr>
-			<td>{block:iflink1}<a href="{text:link 1 url}">{text:link 1}</a>{/block:iflink1}</td>
-			<td>{block:iflink2}<a href="{text:link 2 url}">{text:link 2}</a>{/block:iflink2}</td>
+			<td><a href="/about"> about</a></td>
+			<td><a href="http://odeysseus.tumblr.com/"> theme</a></td>
 		</tr>
 		<tr>
-			<td>{block:iflink3}<a href="{text:link 3 url}">{text:link 3}</a>{/block:iflink3}</td>
-			<td>{block:iflink5}<a href="{text:link 5 url}">{text:link 5}</a>{/block:iflink5}</td>
+			<td><a href="/searchpost"> #TAGS</a></td>
+			<td><a href=""> DOLL SHOP</a></td>
 		</tr>
 	</table>
 	</nav>
-    <div class="d">{Description}</div>
-	<br>
-	<div>
-	    <a href="https://google.com">
-            <img border="0" src="https://static.posters.cz/image/750/naptarak/border-collie-i50706.jpg" width="200" height="200">
-        </a></div>
+    <div style="padding-top:10px;">{Description}</div>
+    <br>
+	<div class="bigi_giftbox"> GIFT BOX <a href="https://www.amazon.com/b?tag=runwaydoll-20&linkCode=ur1&node=3760911">
+<img border="0" src="https://i.imgur.com/SctRq0V.gif" width="180" height="135">
+<div style="padding:4px;"></div>
+</a>
+<a href="https://www.amazon.com/Best-Sellers/zgbs/?tag=runwaydoll-20&linkCode=ur1">
+<img border="0" src="https://i.imgur.com/mqdrrsS.gif" width="180" height="135">
+</div>
 </aside>
 
 <div class="stuff">
